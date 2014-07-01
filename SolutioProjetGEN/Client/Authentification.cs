@@ -14,6 +14,7 @@ namespace Client
     {
         private string login = "jean";
         private string password = "jacques";
+        Plateforme plateforme = new Plateforme();
 
         public Authentification()
         {
@@ -24,7 +25,8 @@ namespace Client
         {
             if (txtLogin.Text == login && txtPassword.Text == password)
             {
-                labelInformation.Text = "Vous êtes authentifiés, c'est cool !";
+                Form.ActiveForm.Hide();
+                plateforme.ShowDialog();
             }
             else
             {
@@ -34,12 +36,23 @@ namespace Client
 
         private void btnConnexion_Click(object sender, EventArgs e)
         {
-            authentification();
+            if (txtLogin.Text == login && txtPassword.Text == password)
+            {
+                Form.ActiveForm.Hide();
+                plateforme.ShowDialog();
+            }
+            else
+            {
+                labelInformation.Text = "Vous êtes mauvais !";
+            }
         }
 
         private void txtpassword_keydown(object sender, KeyEventArgs e)
         {
-            authentification();
+            if (e.KeyCode == Keys.Enter)
+            {
+                authentification();
+            }
         }
     }
 }
