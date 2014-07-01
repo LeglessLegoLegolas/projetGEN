@@ -1,4 +1,4 @@
-﻿namespace Client
+﻿namespace GUI
 {
     partial class Plateforme
     {
