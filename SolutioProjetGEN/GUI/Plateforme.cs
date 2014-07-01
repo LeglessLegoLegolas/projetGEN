@@ -21,5 +21,15 @@ namespace GUI
         {
             Application.Exit();
         }
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                System.IO.StreamReader sr = new
+                   System.IO.StreamReader(openFileDialog1.FileName);
+                MessageBox.Show(sr.ReadToEnd());
+                sr.Close();
+            }
+        }
     }
 }

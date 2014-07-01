@@ -39,7 +39,7 @@
             // 
             // btnConnexion
             // 
-            this.btnConnexion.Location = new System.Drawing.Point(110, 206);
+            this.btnConnexion.Location = new System.Drawing.Point(114, 226);
             this.btnConnexion.Name = "btnConnexion";
             this.btnConnexion.Size = new System.Drawing.Size(75, 23);
             this.btnConnexion.TabIndex = 0;
@@ -49,14 +49,14 @@
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(85, 141);
+            this.txtLogin.Location = new System.Drawing.Point(89, 161);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(100, 20);
             this.txtLogin.TabIndex = 1;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(85, 180);
+            this.txtPassword.Location = new System.Drawing.Point(89, 200);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
@@ -66,8 +66,8 @@
             // labelLogin
             // 
             this.labelLogin.AutoSize = true;
-            this.labelLogin.BackColor = System.Drawing.SystemColors.Window;
-            this.labelLogin.Location = new System.Drawing.Point(85, 125);
+            this.labelLogin.BackColor = System.Drawing.Color.Transparent;
+            this.labelLogin.Location = new System.Drawing.Point(89, 145);
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(39, 13);
             this.labelLogin.TabIndex = 3;
@@ -76,8 +76,8 @@
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
-            this.labelPassword.BackColor = System.Drawing.SystemColors.Window;
-            this.labelPassword.Location = new System.Drawing.Point(85, 164);
+            this.labelPassword.BackColor = System.Drawing.Color.Transparent;
+            this.labelPassword.Location = new System.Drawing.Point(89, 184);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(59, 13);
             this.labelPassword.TabIndex = 4;
@@ -87,7 +87,7 @@
             // 
             this.labelInformation.AutoSize = true;
             this.labelInformation.BackColor = System.Drawing.SystemColors.Window;
-            this.labelInformation.Location = new System.Drawing.Point(12, 250);
+            this.labelInformation.Location = new System.Drawing.Point(16, 270);
             this.labelInformation.Name = "labelInformation";
             this.labelInformation.Size = new System.Drawing.Size(0, 13);
             this.labelInformation.TabIndex = 5;
@@ -97,17 +97,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GUI.Properties.Resources.aut1;
-            this.ClientSize = new System.Drawing.Size(278, 285);
+            this.BackgroundImage = global::GUI.Properties.Resources.aut2;
+            this.ClientSize = new System.Drawing.Size(280, 300);
             this.Controls.Add(this.labelInformation);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.btnConnexion);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(294, 324);
-            this.MinimumSize = new System.Drawing.Size(294, 324);
+            this.MaximumSize = new System.Drawing.Size(280, 300);
+            this.MinimumSize = new System.Drawing.Size(280, 300);
             this.Name = "Authentification";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Authentification ...";
