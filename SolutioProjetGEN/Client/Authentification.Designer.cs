@@ -39,31 +39,35 @@
             // 
             // btnConnexion
             // 
-            this.btnConnexion.Location = new System.Drawing.Point(110, 95);
+            this.btnConnexion.Location = new System.Drawing.Point(110, 206);
             this.btnConnexion.Name = "btnConnexion";
             this.btnConnexion.Size = new System.Drawing.Size(75, 23);
             this.btnConnexion.TabIndex = 0;
             this.btnConnexion.Text = "Connexion";
             this.btnConnexion.UseVisualStyleBackColor = true;
+            this.btnConnexion.Click += new System.EventHandler(this.btnConnexion_Click);
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(85, 30);
+            this.txtLogin.Location = new System.Drawing.Point(85, 141);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(100, 20);
             this.txtLogin.TabIndex = 1;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(85, 69);
+            this.txtPassword.Location = new System.Drawing.Point(85, 180);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtpassword_keydown);
             // 
             // labelLogin
             // 
             this.labelLogin.AutoSize = true;
-            this.labelLogin.Location = new System.Drawing.Point(85, 14);
+            this.labelLogin.BackColor = System.Drawing.SystemColors.Window;
+            this.labelLogin.Location = new System.Drawing.Point(85, 125);
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(39, 13);
             this.labelLogin.TabIndex = 3;
@@ -72,7 +76,8 @@
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(85, 53);
+            this.labelPassword.BackColor = System.Drawing.SystemColors.Window;
+            this.labelPassword.Location = new System.Drawing.Point(85, 164);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(59, 13);
             this.labelPassword.TabIndex = 4;
@@ -81,16 +86,19 @@
             // labelInformation
             // 
             this.labelInformation.AutoSize = true;
-            this.labelInformation.Location = new System.Drawing.Point(85, 150);
+            this.labelInformation.BackColor = System.Drawing.SystemColors.Window;
+            this.labelInformation.Location = new System.Drawing.Point(12, 250);
             this.labelInformation.Name = "labelInformation";
             this.labelInformation.Size = new System.Drawing.Size(0, 13);
             this.labelInformation.TabIndex = 5;
+            this.labelInformation.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Authentification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 195);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(278, 285);
             this.Controls.Add(this.labelInformation);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelLogin);
