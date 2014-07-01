@@ -31,5 +31,10 @@ namespace GUI
                 sr.Close();
             }
         }
+
+        private void btnDechiffrement_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

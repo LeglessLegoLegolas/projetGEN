@@ -32,6 +32,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnOpenFile = new System.Windows.Forms.Button();
             this.labelChooseFile = new System.Windows.Forms.Label();
+            this.btnDechiffrement = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -59,12 +60,23 @@
             this.labelChooseFile.TabIndex = 1;
             this.labelChooseFile.Text = "Veuillez choisir un fichier :";
             // 
+            // btnDechiffrement
+            // 
+            this.btnDechiffrement.Location = new System.Drawing.Point(104, 200);
+            this.btnDechiffrement.Name = "btnDechiffrement";
+            this.btnDechiffrement.Size = new System.Drawing.Size(82, 23);
+            this.btnDechiffrement.TabIndex = 2;
+            this.btnDechiffrement.Text = "Déchiffrement";
+            this.btnDechiffrement.UseVisualStyleBackColor = true;
+            this.btnDechiffrement.Click += new System.EventHandler(this.btnDechiffrement_Click);
+            // 
             // Plateforme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI.Properties.Resources.backgroundPlateform;
             this.ClientSize = new System.Drawing.Size(297, 249);
+            this.Controls.Add(this.btnDechiffrement);
             this.Controls.Add(this.labelChooseFile);
             this.Controls.Add(this.btnOpenFile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -85,5 +97,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnOpenFile;
         private System.Windows.Forms.Label labelChooseFile;
+        private System.Windows.Forms.Button btnDechiffrement;
     }
 }
