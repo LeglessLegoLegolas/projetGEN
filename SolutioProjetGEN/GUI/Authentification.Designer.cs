@@ -97,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::GUI.Properties.Resources.aut1;
             this.ClientSize = new System.Drawing.Size(278, 285);
             this.Controls.Add(this.labelInformation);
             this.Controls.Add(this.labelPassword);
