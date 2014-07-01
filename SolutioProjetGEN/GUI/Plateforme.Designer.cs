@@ -40,7 +40,7 @@
             // 
             // btnOpenFile
             // 
-            this.btnOpenFile.Location = new System.Drawing.Point(12, 34);
+            this.btnOpenFile.Location = new System.Drawing.Point(108, 161);
             this.btnOpenFile.Name = "btnOpenFile";
             this.btnOpenFile.Size = new System.Drawing.Size(75, 23);
             this.btnOpenFile.TabIndex = 0;
@@ -51,7 +51,9 @@
             // labelChooseFile
             // 
             this.labelChooseFile.AutoSize = true;
-            this.labelChooseFile.Location = new System.Drawing.Point(12, 9);
+            this.labelChooseFile.BackColor = System.Drawing.Color.Transparent;
+            this.labelChooseFile.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelChooseFile.Location = new System.Drawing.Point(84, 145);
             this.labelChooseFile.Name = "labelChooseFile";
             this.labelChooseFile.Size = new System.Drawing.Size(128, 13);
             this.labelChooseFile.TabIndex = 1;
@@ -61,7 +63,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 272);
+            this.BackgroundImage = global::GUI.Properties.Resources.backgroundPlateform;
+            this.ClientSize = new System.Drawing.Size(297, 249);
             this.Controls.Add(this.labelChooseFile);
             this.Controls.Add(this.btnOpenFile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
