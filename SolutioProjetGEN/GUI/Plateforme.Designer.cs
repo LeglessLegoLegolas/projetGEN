@@ -64,6 +64,7 @@
             this.ClientSize = new System.Drawing.Size(512, 272);
             this.Controls.Add(this.labelChooseFile);
             this.Controls.Add(this.btnOpenFile);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Plateforme";
             this.Text = "Plateforme";
