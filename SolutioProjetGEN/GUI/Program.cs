@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Client
+namespace GUI
 {
     static class Program
     {
@@ -16,9 +16,7 @@ namespace Client
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Authentification());
-
-            Console.WriteLine("Hello world");
+            Application.Run(new Form1());
         }
     }
 }
