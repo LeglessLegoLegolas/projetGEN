@@ -69,7 +69,10 @@
             this.Controls.Add(this.btnOpenFile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(313, 288);
+            this.MinimumSize = new System.Drawing.Size(313, 288);
             this.Name = "Plateforme";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Plateforme";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Fermeture);
             this.ResumeLayout(false);
