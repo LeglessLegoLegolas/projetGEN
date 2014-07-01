@@ -106,7 +106,10 @@
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.btnConnexion);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(294, 324);
+            this.MinimumSize = new System.Drawing.Size(294, 324);
             this.Name = "Authentification";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Authentification ...";
             this.ResumeLayout(false);
             this.PerformLayout();
