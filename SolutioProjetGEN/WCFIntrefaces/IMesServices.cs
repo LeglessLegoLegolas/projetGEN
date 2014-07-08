@@ -15,8 +15,6 @@ namespace WCFInterfaces
         [OperationContract]
         Stg m_service(Stg msg);
 
-        [OperationContract]
-        bool authentification(string login, string password);
     }
 }
  

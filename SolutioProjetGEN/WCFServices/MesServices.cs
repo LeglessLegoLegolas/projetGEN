@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
+using WCFDataContracts;
 using WCFInterfaces;
 
 namespace WCFServices
@@ -17,23 +18,30 @@ namespace WCFServices
 
        public WCFDataContracts.Stg m_service(WCFDataContracts.Stg msg)
        {
+           if (msg._operationName == "authentification")
+           {
+               Stg res = Lib.Auth.Authentification(msg);
+               return res;
+           }
+           else if(msg._operationName == "decrypt1")
+           {
+               ///apeller WF
+               return msg;
+           }
+           else if (msg._operationName == "decrypt2")
+           {
+               return msg;
+           }
+           else if (msg._operationName == "envoi")
+           {
+               return msg;
+           }
 
-           msg._data[0] = "jules";
-            return msg;
-        }
+           return msg;
+       }
 
 
-        public bool authentification(string login, string password)
-        {
-            if (login == "jean" && password == "jacques")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+     
 
 
        

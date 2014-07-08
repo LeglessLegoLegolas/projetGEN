@@ -25,15 +25,12 @@ namespace ClientSOAP
         //    localhost.Stg res = new localhost.Stg("",null,"","","",false);
             localhost.Stg res = new localhost.Stg();
             res._statut_op = false;
-            res._info = "tamere";
             res._operationName = "authentification";
             res._data = new object[] {login,password};
             
             localhost.Stg msg= new localhost.MesServices().m_service(res);
-
-
-            MessageBox.Show(msg._data[0].ToString());
-            /* if (auth == true)
+           
+            if (msg._statut_op == true)
             {
                 Form.ActiveForm.Hide();
                 plateforme.ShowDialog();
@@ -41,7 +38,7 @@ namespace ClientSOAP
             else
             {
                 label3.Text = "Vous êtes mauvais !";
-            }*/
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
