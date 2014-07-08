@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://localhost:1993/MesServicesWCF" elementFormDefault="qualified" targetNamespace="http://localhost:1993/MesServicesWCF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="m_service">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="msg" type="tns:Stg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Stg">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="_info" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="_data" type="tns:ArrayOfAnyType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="_operationName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="_tokenApll" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="_tokenUser" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="_statut_op" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfAnyType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="m_serviceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="m_serviceResult" type="tns:Stg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="authentification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="login" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="password" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="authentificationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="authentificationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

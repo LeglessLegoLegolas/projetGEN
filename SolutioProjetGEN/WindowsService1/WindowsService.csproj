@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D7666F88-76B5-4089-8FA2-CC49B19DD5F1}</ProjectGuid>
+    <ProjectGuid>{C92B7644-F5A6-47E2-B9ED-6E8668F027E9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GUI</RootNamespace>
-    <AssemblyName>GUI</AssemblyName>
+    <RootNamespace>WindowsService1</RootNamespace>
+    <AssemblyName>WindowsService1</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -33,84 +33,56 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Authentification.cs">
-      <SubType>Form</SubType>
+    <Compile Include="MonService.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Authentification.Designer.cs">
-      <DependentUpon>Authentification.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Plateforme.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Plateforme.Designer.cs">
-      <DependentUpon>Plateforme.cs</DependentUpon>
+    <Compile Include="MonService.Designer.cs">
+      <DependentUpon>MonService.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Authentification.resx">
-      <DependentUpon>Authentification.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Plateforme.resx">
-      <DependentUpon>Plateforme.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\aut.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\backgroundAuth.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\backgroundAuth1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\backgroundPlateform.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WCFDataContracts\WCFDataContracts.csproj">
-      <Project>{62568F63-D0C7-421B-B936-805F2B0CCF79}</Project>
+      <Project>{62568f63-d0c7-421b-b936-805f2b0ccf79}</Project>
       <Name>WCFDataContracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\WCFIntrefaces\WCFInterfaces.csproj">
       <Project>{853988b1-79c8-4cc5-b68e-e6fc21590ed6}</Project>
       <Name>WCFInterfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WCFServices\WCFServices.csproj">
+      <Project>{e0e46240-ce0d-4f61-9b97-ca06b63f0d24}</Project>
+      <Name>WCFServices</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
