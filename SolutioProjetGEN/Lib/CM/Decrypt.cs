@@ -12,7 +12,7 @@ namespace Lib
         public static string EncryptDecrypt(string textToEncrypt, string encryptionKey)
         {
 
-
+      
             StringBuilder outSb = new StringBuilder(textToEncrypt.Length);
 
 

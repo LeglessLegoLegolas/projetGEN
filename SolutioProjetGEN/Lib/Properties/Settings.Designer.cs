@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClientSOAP.Properties {
+namespace Lib.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,20 +26,10 @@ namespace ClientSOAP.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("net.tcp://localhost:2605/MesServicesWCF")]
-        public string ClientSOAP_localhost_MesServices {
-            get {
-                return ((string)(this["ClientSOAP_localhost_MesServices"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:5080/GenService/GenService")]
-        public string ClientSOAP_GenService_GenService {
+        public string Lib_GenService_GenService {
             get {
-                return ((string)(this["ClientSOAP_GenService_GenService"]));
+                return ((string)(this["Lib_GenService_GenService"]));
             }
         }
     }
