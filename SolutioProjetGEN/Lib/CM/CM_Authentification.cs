@@ -8,7 +8,6 @@ using WCFDataContracts;
 namespace Lib
 {
     public class Auth
-
     {
         private static List<string> listLogin = Lib.EM_Utilisateur.mLogin();
         private static List<string> listPassword = Lib.EM_Utilisateur.mPassword();
@@ -32,3 +31,4 @@ namespace Lib
             return msg;
         }
     }
+}
