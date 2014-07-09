@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Plateforme));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -38,17 +39,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(108, 81);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(43, 158);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 17);
+            this.label1.Size = new System.Drawing.Size(128, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Veuillez choisir un fichier";
+            this.label1.Text = "Veuillez choisir un fichier :";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(111, 129);
+            this.button1.Location = new System.Drawing.Point(175, 154);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(56, 21);
             this.button1.TabIndex = 1;
             this.button1.Text = "Fichier...";
             this.button1.UseVisualStyleBackColor = true;
@@ -56,9 +60,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(111, 176);
+            this.button2.Location = new System.Drawing.Point(313, 179);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(97, 21);
             this.button2.TabIndex = 2;
             this.button2.Text = "Déchiffrer";
             this.button2.UseVisualStyleBackColor = true;
@@ -66,9 +71,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(56, 38);
+            this.button3.Location = new System.Drawing.Point(313, 154);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(97, 21);
             this.button3.TabIndex = 3;
             this.button3.Text = "TestDecrypt";
             this.button3.UseVisualStyleBackColor = true;
@@ -76,13 +82,18 @@
             // 
             // Plateforme
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(407, 253);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(464, 261);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(480, 300);
+            this.MinimumSize = new System.Drawing.Size(480, 300);
             this.Name = "Plateforme";
             this.Text = "Plateforme";
             this.ResumeLayout(false);
