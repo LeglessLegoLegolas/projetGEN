@@ -12,9 +12,11 @@ namespace ClientSOAP
 {
     public partial class Plateforme : Form
     {
+        private string chaine;
         public Plateforme()
         {
             InitializeComponent();
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -26,6 +28,13 @@ namespace ClientSOAP
         private void button2_Click(object sender, EventArgs e)
         {
 
+            localhost.Stg res = new localhost.Stg();
+            res._statut_op = false;
+            res._operationName = "decrypt";
+            res._data = new object[] { chaine };
+
+
+            new localhost.MesServices().m_service(res);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,19 +43,16 @@ namespace ClientSOAP
             {
                 System.IO.StreamReader sr = new
                    System.IO.StreamReader(openFileDialog1.FileName);
-                MessageBox.Show(sr.ReadToEnd());
+               // MessageBox.Show(sr.ReadToEnd());
 
-                var chaine = sr.ReadToEnd().ToString();
+                chaine = sr.ReadToEnd().ToString();
+            
 
+                
 
-                localhost.Stg res = new localhost.Stg();
-                res._statut_op = false;
-                res._operationName = "decrypt";
-                res._data = new object[] { chaine };
+               
 
-               new localhost.MesServices().m_service(res);
-
-               label2.Text = sr.ReadToEnd();
+         
                 sr.Close();
             }
         }

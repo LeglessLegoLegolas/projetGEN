@@ -46,20 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Authentification.cs">
+    <Compile Include="CU\Authentification.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Authentification.Designer.cs">
+    <Compile Include="CU\Authentification.Designer.cs">
       <DependentUpon>Authentification.cs</DependentUpon>
     </Compile>
-    <Compile Include="Plateforme.cs">
+    <Compile Include="CU\Plateforme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Plateforme.Designer.cs">
+    <Compile Include="CU\Plateforme.Designer.cs">
       <DependentUpon>Plateforme.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Traitement.cs" />
     <Compile Include="Web References\GenService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -70,10 +71,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Authentification.resx">
+    <EmbeddedResource Include="CU\Authentification.resx">
       <DependentUpon>Authentification.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Plateforme.resx">
+    <EmbeddedResource Include="CU\Plateforme.resx">
       <DependentUpon>Plateforme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

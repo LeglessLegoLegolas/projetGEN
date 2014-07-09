@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lib
 {
-    class Decrypt
+   public class Decrypt
     {
 
         public static string EncryptDecrypt(string textToEncrypt, string encryptionKey)

@@ -25,7 +25,7 @@ namespace WCFServices
            }
            else if(msg._operationName == "decrypt1")
            {
-               ///apeller WF
+               Lib.Workflow.wf(msg);
                return msg;
            }
            else if (msg._operationName == "decrypt2")

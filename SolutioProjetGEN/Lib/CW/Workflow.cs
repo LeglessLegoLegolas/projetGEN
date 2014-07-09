@@ -5,13 +5,14 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WCFDataContracts;
 
 namespace Lib
 {
-    class Workflow
+   public static class Workflow
     {
 
-        static void wf()
+        public static void wf(Stg msg)
         {
              var watch = Stopwatch.StartNew();
 
